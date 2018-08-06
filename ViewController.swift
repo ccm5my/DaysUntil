@@ -15,30 +15,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        daysUntilPaycheck.text = "\(String(0))"
     }
 
    
-    func daysUntil()->Int {
+    @IBAction func daysUntil(_ sender: Any){
         let date = Date()
         let calendar = Calendar.current
         let day: Int = calendar.component(.day,from: date)
         
         if (day == 5 || day == 20) {
-            return 0;
+            daysUntilPaycheck.text = "\(String(0))";
         }
-        if day >= 1 && day < 5 {
-            return 5-day
+        if (day >= 1 && day < 5) {
+            daysUntilPaycheck.text = "\(String(5-day))"
         }
-        if day>5 && day<20 {
-            return 20-day
+        if (day>5 && day<20) {
+            daysUntilPaycheck.text = "\(String(20-day))"
         }
-        if day<=31 && day>20 {
+        if (day<=31 && day>20) {
             let range = calendar.range(of: .day, in: .month, for: date)!
             let numDaysInMonth = range.count
-            return 5-(numDaysInMonth-day)
+            daysUntilPaycheck.text = "\(String(5-(numDaysInMonth-day)))"
         }
-        return 0;
+        
     }
         
             

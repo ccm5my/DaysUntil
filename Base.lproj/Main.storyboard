@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,25 +15,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaysUntilPaycheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Days Until Next Paycheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-vH-ukf">
-                                <rect key="frame" x="32.5" y="31" width="310" height="32"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.95047158002853394" green="0.95890778303146362" blue="0.85695153474807739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joW-Bs-lG7">
-                                <rect key="frame" x="173" y="305" width="29" height="56.5"/>
+                                <rect key="frame" x="173" y="377.66666666666669" width="29" height="56.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Until Next Paycheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-vH-ukf">
+                                <rect key="frame" x="32" y="74" width="310" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.95047158002853394" green="0.95890778303146362" blue="0.85695153474807739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" red="0.64171618223190308" green="0.90056818723678589" blue="0.92732810974121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="yIL-vH-ukf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1Nk-UM-HPS"/>
                             <constraint firstItem="yIL-vH-ukf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CeP-Na-Y6S"/>
                             <constraint firstItem="joW-Bs-lG7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eHk-mS-UBF"/>
                             <constraint firstItem="joW-Bs-lG7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x9A-Du-78N"/>
@@ -41,8 +42,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="calculateDays" destination="joW-Bs-lG7" id="VJV-pa-VY8"/>
-                        <outlet property="daysUntilPaycheck" destination="joW-Bs-lG7" id="kyM-0H-uAY"/>
+                        <outlet property="daysUntilPaycheck" destination="joW-Bs-lG7" id="ccN-9E-w4w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
